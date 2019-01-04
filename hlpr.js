@@ -15,7 +15,7 @@ export const hlpr_getReadablePhone = phoneNr => {
     let readablePhoneNr = phoneNr;
   
     for (let number in numbers) {
-      const regex = new RegExp(escapeRegExp(number), 'g');
+      const regex = new RegExp(hlpr_escapeRegExp(number), 'g');
       readablePhoneNr = readablePhoneNr.replace(regex, numbers[number]);
     }
   
@@ -31,7 +31,7 @@ export const hlpr_getReadablePhone = phoneNr => {
     let readableEMail = email;
   
     for (let word in mail) {
-      const regex = new RegExp(escapeRegExp(word), 'g');
+      const regex = new RegExp(hlpr_escapeRegExp(word), 'g');
       readableEMail = readableEMail.replace(regex, mail[word]);
     }
     return readableEMail;
