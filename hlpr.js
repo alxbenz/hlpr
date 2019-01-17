@@ -53,7 +53,7 @@ export const hlpr_getReadablePhone = phoneNr => {
     });
   };
   
-  export const hlpr_formatValueToCurrency: formatValueToCurrency = (
+  export const hlpr_formatValueToCurrency = (
     value,
     currency = 'EUR',
     lang = 'de-DE'
