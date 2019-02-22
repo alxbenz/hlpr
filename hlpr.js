@@ -67,9 +67,19 @@ export const hlpr_formatValueToCurrency = (
   return formattedCurrency;
 };
 
-export const hlpr_fetchData = (url = ``, data = {}, options = {method = 'POST', mode: 'cors', cache: 'no-cache', credentials: 'same-origin', redirect: 'follow', referrer: 'no-referrer'}) => {
+export const hlpr_fetchData = (url = ``, data = {}, options) => {
+  const fetchOptions = {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    redirect: 'follow',
+    referrer: 'no-referrer',
+    ...options
+  };
+
   return fetch(url, {
-    options,
+    fetchOptions,
     headers: {
       'Content-Type': 'application/json'
     },
