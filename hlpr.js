@@ -79,7 +79,7 @@ export const hlpr_fetchData = (url = ``, data = {}, options) => {
   };
 
   return fetch(url, {
-    fetchOptions,
+    ...fetchOptions,
     headers: {
       'Content-Type': 'application/json'
     },
